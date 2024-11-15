@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "تواصل معنا";
+    ViewBag.Message = "نحن هنا للاستماع إليك! لا تتردد في الاتصال بنا.";
+}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+    }
+
+    main {
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #007bff;
+    }
+
+    h3 {
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    address {
+        background: #e9ecef;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        a:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<main aria-labelledby="title">
+    <h2 id="title">@ViewBag.Title</h2>
+    <h3>@ViewBag.Message</h3>
+
+    <address>
+        <strong>العنوان:</strong><br />
+        شارع الملك عبد الله، مدينة تبوك<br />
+        المملكة العربية السعودية<br />
+        <abbr title="هاتف"></abbr> 050065388
+    </address>
+
+    <address>
+        <strong>البريد الإلكتروني للدعم:</strong> <a href="mailto:info@tabukservices.com">info@tabukservices.com</a><br />
+        <strong>البريد الإلكتروني للتسويق:</strong> <a href="mailto:marketing@tabukservices.com">marketing@tabukservices.com</a>
+    </address>
+
+    <h3>أرقام الاتصال</h3>
+    <p>يمكنك التواصل معنا عبر الأرقام التالية:</p>
+    <ul>
+        <li>رقم الجوال: <a href="tel:0542356055">0542356055</a></li>
+        <li>رقم الهاتف الثابت: <a href="tel:0142356785">0142356785</a></li>
+    </ul>
+</main>
+
