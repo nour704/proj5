@@ -1,0 +1,170 @@
+﻿
+@{
+    ViewBag.Title = "الرئيسية";
+}
+
+
+<div class="jumbotron text-center hero-section">
+    <h1 class="display-4 text-dark animated fadeIn">مرحبًا بكم في خدمات تبوك!</h1>
+    <p class="lead text-dark animated fadeIn delay-1s">نحن هنا لنقدم لكم أفضل الخدمات بأسهل الطرق، مع حلول مبتكرة وسهلة الوصول.</p>
+    <hr class="my-4" />
+    <p class="text-dark animated fadeIn delay-2s">تواصل معنا واكتشف كيف يمكننا مساعدتك في تحقيق احتياجاتك.</p>
+    <a class="btn btn-lg btn-dark animated zoomIn" href="#services" role="button">اكتشف المزيد</a>
+</div>
+
+
+<section id="services" class="container mt-5">
+    <h2 class="text-center mb-4 animated fadeIn text-dark">خدماتنا المميزة</h2>
+    <div class="row">
+        <!-- Service 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="service-item p-4 border rounded-lg shadow-lg text-center hover-service">
+                <i class="fas fa-bell fa-3x mb-3 text-primary"></i> <!-- أيقونة البلاغات -->
+                <h5 class="font-weight-bold text-dark">تقديم البلاغات</h5>
+                <p class="text-dark">يمكنك تقديم البلاغات بسهولة وسرعة، فنحن هنا لنساعدك!</p>
+                <a href="#" class="btn btn-primary btn-lg">أكثر عن الخدمة</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="service-item p-4 border rounded-lg shadow-lg text-center hover-service">
+                <i class="fas fa-search fa-3x mb-3 text-secondary"></i> <!-- أيقونة الاستعلام -->
+                <h5 class="font-weight-bold text-dark">استعلام عن الخدمات</h5>
+                <p class="text-dark">استفسر عن جميع الخدمات المتاحة بكل سهولة.</p>
+                <a href="#" class="btn btn-secondary btn-lg">أكثر عن الخدمة</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="service-item p-4 border rounded-lg shadow-lg text-center hover-service">
+                <i class="fas fa-map-marker-alt fa-3x mb-3 text-danger"></i> <!-- أيقونة الخريطة -->
+                <h5 class="font-weight-bold text-dark">خريطة تفاعلية</h5>
+                <p class="text-dark">استخدم الخريطة لتحديد المواقع المهمة بسهولة.</p>
+                <a href="#" class="btn btn-danger btn-lg">أكثر عن الخدمة</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5">
+    <h2 class="text-center mb-4 animated fadeIn text-dark">لماذا تختارنا؟</h2>
+    <p class="text-center mb-4 text-dark">نحن ملتزمون بتقديم خدمات عالية الجودة بأعلى مستوى من الكفاءة. هدفنا هو تعزيز الشفافية والمشاركة المجتمعية.</p>
+    <ul class="list-unstyled text-center text-dark">
+        <li><i class="fas fa-briefcase mr-2 text-primary"></i> <strong>فريق عمل محترف وذو خبرة.</strong></li>
+        <li><i class="fas fa-phone-alt mr-2 text-secondary"></i> <strong>تواصل سهل وسريع.</strong></li>
+        <li><i class="fas fa-star mr-2 text-danger"></i> <strong>تقديم خدمات متنوعة تلبي جميع الاحتياجات.</strong></li>
+    </ul>
+</section>
+
+
+<footer class="bg-light text-dark text-center py-4 mt-5">
+    <p>حقوق النشر &copy; <span id="year"></span> خدمات تبوك. جميع الحقوق محفوظة.</p>
+    <div class="social-icons">
+        <a href="#" class="text-dark mx-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-dark mx-2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-dark mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-dark mx-2"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</footer>
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    
+    AOS.init({
+        easing: 'ease-in-out',
+        duration: 1000
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<style>
+    
+    .hero-section {
+        background-color: white;
+        color: black;
+        padding: 100px 0;
+        border-radius: 15px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-section h1, .hero-section p {
+        animation-duration: 1s;
+    }
+
+    
+    .service-item {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 40px 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-item i {
+        color: #007BFF;
+    }
+
+    .hover-service:hover {
+        background-color: #f8f8f8;
+        cursor: pointer;
+    }
+
+    .btn-dark, .btn-primary, .btn-secondary, .btn-danger {
+        background-color: #343a40;
+        border-color: #343a40;
+        transition: background 0.3s ease;
+        border-radius: 30px;
+        font-weight: bold;
+    }
+
+    .btn-dark:hover, .btn-primary:hover, .btn-secondary:hover, .btn-danger:hover {
+        background-color: #23272b;
+    }
+
+    .social-icons a {
+        font-size: 1.5em;
+        transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+        transform: scale(1.2);
+    }
+
+    /* Footer */
+    footer {
+        background-color: #f8f9fa;
+    }
+
+    footer p {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+    .animated.zoomIn {
+        animation: zoomIn 1s ease-in-out;
+    }
+
+  
+    keyframes zoomIn {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+
+

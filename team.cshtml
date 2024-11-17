@@ -1,0 +1,159 @@
+﻿
+@model List<proj5.Models.Emp>
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <title>فريق العمل</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        .table {
+            background-color: white;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        thead {
+            background-color: #66B2FF; /* لون أزرق فاتح جدًا */
+            color: white;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 15px;
+        }
+
+        tr:hover {
+            background-color: #e9ecef;
+        }
+
+        .no-data {
+            font-size: 1.2em;
+            color: #6c757d;
+        }
+
+        .card-container {
+            margin-top: 40px;
+        }
+
+        .card {
+            margin: 15px 0;
+            transition: transform 0.3s;
+        }
+
+            .card:hover {
+                transform: scale(1.05);
+            }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">فريق العمل</h2>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>اسم الموظف</th>
+                    <th>المسمى الوظيفي</th>
+                    <th>رقم الهاتف</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Count > 0)
+                {
+                    foreach (var employee in Model)
+                    {
+                        <tr>
+                            <td>@employee.EmpName</td>
+                            <td>@employee.JobTitle</td>
+                            <td>@employee.PhoneNumber</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="3" class="text-center no-data">لا توجد بيانات لعرضها</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="card-container">
+            <h3 class="text-center">قصص نجاح</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">مشروع X</h5>
+                            <p class="card-text">ساهمنا في تحسين العمليات وتقليل التكاليف بنسبة 20%.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">مبادرة Y</h5>
+                            <p class="card-text">تطوير حل مبتكر أدى إلى زيادة رضا العملاء بشكل ملحوظ.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">مشروع Z</h5>
+                            <p class="card-text">إطلاق خدمة جديدة زادت من كفاءة العمل بنسبة 30%.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <h3 class="text-center">خدماتنا</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">استشارات في التخطيط الاستراتيجي</h5>
+                            <p class="card-text">نقدم استشارات متخصصة لمساعدتك في وضع استراتيجيات فعالة.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">دورات تدريبية متخصصة</h5>
+                            <p class="card-text">نعرض مجموعة من الدورات التي تهدف لتطوير مهارات الموظفين.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">خدمات دعم فني</h5>
+                            <p class="card-text">نوفر دعمًا فنيًا على مدار الساعة لضمان استمرارية العمل.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

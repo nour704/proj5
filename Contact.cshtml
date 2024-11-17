@@ -1,0 +1,164 @@
+﻿@{
+    ViewBag.Title = "تواصل معنا";
+    ViewBag.Message = "نحن هنا للاستماع إليك! لا تتردد في الاتصال بنا.";
+}
+
+<div class="jumbotron text-center hero-section">
+    <h1 class="display-4 text-dark animated fadeIn">تواصل معنا</h1>
+    <p class="lead text-dark animated fadeIn delay-1s">نحن هنا للاستماع إليك! إذا كانت لديك أي استفسارات، لا تتردد في الاتصال بنا.</p>
+    <hr class="my-4" />
+    <p class="text-dark animated fadeIn delay-2s">نحن نعمل دائمًا من أجل تلبية احتياجاتك وتحقيق تطلعاتك.</p>
+    <a class="btn btn-lg btn-dark animated zoomIn" href="#contact" role="button">اتصل الآن</a>
+</div>
+
+<section id="contact" class="container mt-5">
+    <h2 class="text-center mb-4 animated fadeIn text-dark">طرق الاتصال</h2>
+
+    <!-- Address Section -->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="service-item p-4 border rounded-lg shadow-lg text-center hover-service">
+                <i class="fas fa-map-marker-alt fa-3x mb-3 text-primary"></i> <!-- أيقونة العنوان -->
+                <h5 class="font-weight-bold text-dark">العنوان</h5>
+                <p class="text-dark">شارع الملك عبد الله، مدينة تبوك، المملكة العربية السعودية</p>
+            </div>
+        </div>
+
+        <!-- Email Section -->
+        <div class="col-md-6 mb-4">
+            <div class="service-item p-4 border rounded-lg shadow-lg text-center hover-service">
+                <i class="fas fa-envelope fa-3x mb-3 text-secondary"></i> <!-- أيقونة البريد الإلكتروني -->
+                <h5 class="font-weight-bold text-dark">البريد الإلكتروني</h5>
+                <p class="text-dark">للدعم: <a href="mailto:info@tabukservices.com">info@tabukservices.com</a></p>
+                <p class="text-dark">للتسويق: <a href="mailto:marketing@tabukservices.com">marketing@tabukservices.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phone Section -->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="service-item p-4 border rounded-lg shadow-lg text-center hover-service">
+                <i class="fas fa-phone-alt fa-3x mb-3 text-danger"></i> <!-- أيقونة الهاتف -->
+                <h5 class="font-weight-bold text-dark">رقم الهاتف</h5>
+                <p class="text-dark">الجوال: <a href="tel:0542356055">0542356055</a></p>
+                <p class="text-dark">الهاتف الثابت: <a href="tel:0142356785">0142356785</a></p>
+            </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="col-md-6 mb-4">
+            <div class="service-item p-4 border rounded-lg shadow-lg text-center hover-service">
+                <i class="fas fa-comments fa-3x mb-3 text-warning"></i> <!-- أيقونة الرسائل -->
+                <h5 class="font-weight-bold text-dark">أرسل رسالة</h5>
+                <p class="text-dark">إذا كنت بحاجة إلى استفسار سريع، يمكنك إرسال رسالة مباشرة إلينا.</p>
+                <a href="mailto:info@tabukservices.com" class="btn btn-warning btn-lg">أرسل رسالة</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-light text-dark text-center py-4 mt-5">
+    <p>حقوق النشر &copy; <span id="year"></span> خدمات تبوك. جميع الحقوق محفوظة.</p>
+    <div class="social-icons">
+        <a href="#" class="text-dark mx-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-dark mx-2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-dark mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-dark mx-2"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        easing: 'ease-in-out',
+        duration: 1000
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<style>
+    .hero-section {
+        background-color: white;
+        color: black;
+        padding: 100px 0;
+        border-radius: 15px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-section h1, .hero-section p {
+        animation-duration: 1s;
+    }
+
+    .service-item {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 40px 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-item i {
+        color: #007BFF;
+    }
+
+    .hover-service:hover {
+        background-color: #f8f8f8;
+        cursor: pointer;
+    }
+
+    .btn-dark, .btn-primary, .btn-secondary, .btn-danger, .btn-warning {
+        background-color: #343a40;
+        border-color: #343a40;
+        transition: background 0.3s ease;
+        border-radius: 30px;
+        font-weight: bold;
+    }
+
+    .btn-dark:hover, .btn-primary:hover, .btn-secondary:hover, .btn-danger:hover, .btn-warning:hover {
+        background-color: #23272b;
+    }
+
+    .social-icons a {
+        font-size: 1.5em;
+        transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+        transform: scale(1.2);
+    }
+
+    /* Footer */
+    footer {
+        background-color: #f8f9fa;
+    }
+
+    footer p {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+    .animated.zoomIn {
+        animation: zoomIn 1s ease-in-out;
+    }
+
+    keyframes zoomIn {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+
+

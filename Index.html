@@ -1,0 +1,98 @@
+﻿@model Tuple<List<proj5.Models.Emp>, List<proj5.Models.Category>, List<proj5.Models.Feature>>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+
+            @Html.ActionLink("خدمات تبوك", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li>@Html.ActionLink("الرئيسية", "Home", "Home")</li>
+                    <li><a href="@Url.Action(" About", "Home" )">من نحن</a></li>
+                    <li><a href="@Url.Action(" Contact", "Home" )">التواصل</a></li>
+                    <li>@Html.ActionLink("فريق العمل", "Team", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="search">
+        <input type="text" placeholder="البحث في خدمات تبوك">
+        <button>بحث</button>
+    </div>
+    <div class="container m-3">
+
+
+        <div class="jumbotron">
+            <h3 class="display-4">مرحبا بكم في "خدمات تبوك"</h3>
+            <div class="alert alert-danger">
+                عذرًا، حدث خطأ أثناء تحميل البيانات. يرجى المحاولة مرة أخرى.
+            </div>
+            <p class="lead">نسعى من خلال هذا الموقع إلى تحسين تجربة المواطنين في التواصل مع أمانة منطقة تبوك عبر حلول تقنية مبتكرة تُسهم في تحسين جودة الخدمات المقدمة.</p>
+            <hr class="my-4" />
+            <p>هدفنا هو تعزيز الشفافية والمشاركة المجتمعية، وتقديم خدمات أمانة تبوك بأعلى مستوى من الكفاءة والسرعة.</p>
+        </div>
+        <div class="video-container" style="position: relative; width: 100%; height: 60vh; overflow: hidden;">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/phEnu7nv78A?autoplay=1&mute=1" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0;"></iframe>
+        </div>
+
+        @foreach (var category in Model.Item2)
+        {
+            <h2 class="text-center">@category.CategoryName</h2>
+            <div class="row">
+                @foreach (var Feature in Model.Item3)
+                {
+                    if (category.CategoryID == Feature.CategoryID)
+                    {
+                        <div class="col-md-4">
+                            <div class="card" style="height: 250px;">
+                                <a class="card1" href="#">
+                                    <h3>@Feature.FeatureName</h3>
+                                    <p>@Feature.FeatureDescription</p>
+                                    <div class="go-corner">
+                                        <div class="go-arrow">→</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        }
+        <button id="scrollToTop" class="btn btn-primary" style="position: fixed; bottom: 20px; right: 20px; display: none;">
+            ↑
+        </button>
+
+        <footer class="bg-dark text-white text-center py-3 mt-5">
+            <p>حقوق النشر &copy; <span id="year"></span> خدمات تبوك</p>
+        </footer>
+
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+
+            window.onscroll = function () {
+                var button = document.getElementById("scrollToTop");
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    button.style.display = "block";
+                } else {
+                    button.style.display = "none";
+                }
+            };
+
+            document.getElementById("scrollToTop").onclick = function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+
+            document.getElementById("teamToggle").onclick = function (e) {
+                e.preventDefault();
+                var teamSection = document.getElementById("teamSection");
+                teamSection.style.display = teamSection.style.display === "none" ? "block" : "none";
+            };
+        </script>
+    </div>
+</body>

@@ -1,0 +1,210 @@
+﻿
+@{
+    ViewBag.Title = "من نحن";
+}
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <style>
+        /* هيدر ثابت (Sticky) مع تأثيرات التمرير */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .navbar a {
+                color: #fff !important;
+            }
+
+        .navbar-brand {
+            color: #fff !important;
+        }
+
+        .navbar.sticky {
+            background-color: #23272b;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+            /* تغيير اللون عند التمرير */
+            .navbar.sticky a {
+                color: #fff !important;
+            }
+
+        .navbar-nav .nav-link:hover {
+            color: #f8f9fa !important;
+        }
+
+        /* مسافة بين الهيدر والمحتوى */
+        .main-content {
+            margin-top: 80px;
+        }
+
+        /* هيدر الصفحة "من نحن" */
+        .hero-section {
+            background-color: white;
+            color: black;
+            padding: 100px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+            .hero-section h1, .hero-section p {
+                animation-duration: 1s;
+            }
+
+        .btn-dark {
+            background-color: #343a40;
+            border-color: #343a40;
+            transition: background 0.3s ease;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+            .btn-dark:hover {
+                background-color: #23272b;
+            }
+
+        /* فقرات القسم الخاص بالقيم */
+        .service-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 40px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+            .service-item:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            /* التأثير عند التمرير */
+            .service-item i {
+                color: #007BFF;
+            }
+
+        .hover-service:hover {
+            background-color: #f8f8f8;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- هيدر متحرك (Sticky) -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">خدمات تبوك</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#values">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="main-content">
+
+        
+        <div class="hero-section">
+            <h1 class="display-4 text-dark animated fadeIn">من نحن</h1>
+            <p class="lead text-dark animated fadeIn delay-1s">نحن في خدمات تبوك ملتزمون بتقديم تجربة فريدة ومبتكرة للمواطنين في تبوك.</p>
+            <hr class="my-4" />
+            <p class="text-dark animated fadeIn delay-2s">نهدف إلى تحقيق الشفافية والمشاركة الفعّالة من خلال تقديم خدمات عالية الجودة تسهم في تطوير المنطقة.</p>
+            <a class="btn btn-lg btn-dark animated zoomIn" href="#values" role="button">اكتشف المزيد</a>
+        </div>
+
+       
+        <section id="values" class="container mt-5">
+            <h2 class="text-center mb-4 animated fadeIn text-dark">قيمنا</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="service-item p-4 border rounded-lg shadow-lg text-center hover-service">
+                        <i class="fas fa-gem fa-3x mb-3 text-primary"></i>
+                        <h5 class="font-weight-bold text-dark">الشفافية</h5>
+                        <p class="text-dark">نؤمن بأن المعلومات يجب أن تكون متاحة للجميع.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="service-item p-4 border rounded-lg shadow-lg text-center hover-service">
+                        <i class="fas fa-lightbulb fa-3x mb-3 text-success"></i>
+                        <h5 class="font-weight-bold text-dark">الابتكار</h5>
+                        <p class="text-dark">نستخدم التكنولوجيا لتحسين الخدمات وتقديم حلول جديدة.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="service-item p-4 border rounded-lg shadow-lg text-center hover-service">
+                        <i class="fas fa-users fa-3x mb-3 text-warning"></i>
+                        <h5 class="font-weight-bold text-dark">التعاون</h5>
+                        <p class="text-dark">نعمل معاً كفريق واحد لتحقيق أهدافنا المشتركة.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="service-item p-4 border rounded-lg shadow-lg text-center hover-service">
+                        <i class="fas fa-cogs fa-3x mb-3 text-danger"></i>
+                        <h5 class="font-weight-bold text-dark">الجودة</h5>
+                        <p class="text-dark">نقدم أفضل مستوى من الخدمة للمواطنين.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>حقوق النشر &copy; <span id="year"></span> خدمات تبوك. جميع الحقوق محفوظة.</p>
+    </footer>
+
+   
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-in-out',
+            duration: 1000
+        });
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        
+        window.onscroll = function () {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+            }
+        };
+    </script>
+</body>
+</html>
+
+
+
+
+
+
