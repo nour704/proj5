@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "من نحن";
+}
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">من نحن</h1>
+    <p class="lead">نحن في خدمات تبوك ملتزمون بتقديم تجربة فريدة ومبتكرة للمواطنين في تبوك.</p>
+    <hr class="my-4" />
+    <p>نهدف إلى تحقيق الشفافية والمشاركة الفعّالة من خلال تقديم خدمات عالية الجودة تسهم في تطوير المنطقة.</p>
+    <a class="btn btn-primary btn-lg" href="#values" role="button">اكتشف المزيد</a>
+</div>
+
+<section id="values" class="container mt-5">
+    <h2 class="text-center">قيمنا</h2>
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="service-item p-4 border rounded text-center">
+                <h5 class="font-weight-bold">الشفافية</h5>
+                <p>نؤمن بأن المعلومات يجب أن تكون متاحة للجميع.</p>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="service-item p-4 border rounded text-center">
+                <h5 class="font-weight-bold">الابتكار</h5>
+                <p>نستخدم التكنولوجيا لتحسين الخدمات وتقديم حلول جديدة.</p>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="service-item p-4 border rounded text-center">
+                <h5 class="font-weight-bold">التعاون</h5>
+                <p>نعمل معاً كفريق واحد لتحقيق أهدافنا المشتركة.</p>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="service-item p-4 border rounded text-center">
+                <h5 class="font-weight-bold">الجودة</h5>
+                <p>نقدم أفضل مستوى من الخدمة للمواطنين.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5">
+    <h2 class="text-center">فريقنا</h2>
+    <p class="text-center">يضم فريقنا مجموعة من الخبراء المتخصصين الذين يعملون بلا كلل لتحقيق أهدافنا.</p>
+    <p class="text-center">نؤمن بأهمية تطوير مهارات موظفينا ونعمل على تحسين بيئة العمل لضمان رضاهم.</p>
+</section>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>حقوق النشر &copy; <span id="year"></span> خدمات تبوك. جميع الحقوق محفوظة.</p>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
